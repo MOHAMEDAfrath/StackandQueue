@@ -25,6 +25,16 @@ namespace StackandQueue
             }
             Console.WriteLine("Enqueued {0}",data);
         }
+        public void Dequeue()
+        {
+            if(this.front == null)
+            {
+                Console.WriteLine("Empty queue");
+                return;
+            }
+            Console.WriteLine("Dequeued {0}",this.front.data);
+            this.front = this.front.next;
+        }
         public void Display()
         {
             Node temp = this.front;

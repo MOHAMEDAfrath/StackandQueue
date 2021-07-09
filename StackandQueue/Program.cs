@@ -48,23 +48,32 @@ namespace StackandQueue
                     }
                     break;
                 case 2:
-                    Console.WriteLine("Queue Operations");
-                    Console.WriteLine("1.Enqueue");
-                    Console.WriteLine("2.Peek");
-                    Console.WriteLine("3.Pop");
-                    Console.WriteLine("4.Exit");
-                    int qoptions = Convert.ToInt32(Console.ReadLine());
-                    switch (qoptions)
+                    while (true)
                     {
-                        case 1:
-                            Console.WriteLine("Enqueue");
-                            queueOperations.Enqueue(56);
-                            queueOperations.Enqueue(30);
-                            queueOperations.Enqueue(70);
-                            Console.WriteLine("After Enqueue");
-                            queueOperations.Display();
-                            break;
-
+                        Console.WriteLine("Queue Operations");
+                        Console.WriteLine("1.Enqueue");
+                        Console.WriteLine("2.Dequeue");
+                        Console.WriteLine("3.Exit");
+                        int qoptions = Convert.ToInt32(Console.ReadLine());
+                        switch (qoptions)
+                        {
+                            case 1:
+                                Console.WriteLine("Enqueue");
+                                queueOperations.Enqueue(56);
+                                queueOperations.Enqueue(30);
+                                queueOperations.Enqueue(70);
+                                Console.WriteLine("After Enqueue");
+                                queueOperations.Display();
+                                break;
+                            case 2:
+                                Console.WriteLine("Dequeue");
+                                queueOperations.Dequeue();
+                                Console.WriteLine("After Dequeue");
+                                queueOperations.Display();
+                                break;
+                            case 3:
+                                return;
+                        }
                     }
                     break;
                 case 3:
