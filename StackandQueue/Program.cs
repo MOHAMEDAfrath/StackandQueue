@@ -10,6 +10,7 @@ namespace StackandQueue
             StackOperations stackOperations = new StackOperations();
             QueueOperations queueOperations = new QueueOperations();
             Console.WriteLine("Enter 1 for Stack Operations");
+            Console.WriteLine("Enter 2 for Queue Operations");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
